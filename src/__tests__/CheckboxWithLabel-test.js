@@ -4,6 +4,7 @@ import CheckboxWithLabel from "../CheckboxWithLabel";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+// Domのテスト
 it("CheckboxWithLabel changes the text after click", () => {
   // Render a checkbox with label in the document
   const checkbox = shallow(<CheckboxWithLabel labelOn="On" labelOff="Off" />);

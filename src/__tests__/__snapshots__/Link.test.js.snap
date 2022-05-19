@@ -32,3 +32,18 @@ exports[`changes the class when hovered 3`] = `
   Facebook
 </a>
 `;
+
+exports[`will check the matchers and pass 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "id": Any<Number>,
+  "name": "LeBron James",
+}
+`;
+
+exports[`will check the values and pass 1`] = `
+Object {
+  "createdAt": Any<Date>,
+  "name": "Bond... James Bond",
+}
+`;
