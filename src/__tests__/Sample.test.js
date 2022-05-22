@@ -3,7 +3,12 @@ import { render, screen } from "@testing-library/react";
 
 import Sample from "../Sample";
 
-describe("App", () => {
+describe("sample", () => {
+  // warning 回避
+  beforeEach(() => {
+    globalThis.IS_REACT_ACT_ENVIRONMENT = false;
+  });
+
   test("renders App component", () => {
     render(<Sample />);
     // package.json に設定を書いて回避。

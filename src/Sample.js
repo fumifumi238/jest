@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-
-const getUser = async () => {
-  return { id: "1", name: "Robin" };
-};
-
+import React, { useState, useEffect } from "react";
 const Sample = () => {
   const [search, setSearch] = useState("");
-  const [user, setUser] = React.useState(null);
+  const [user, setUser] = useState(null);
+
+  const getUser = async () => {
+    return { id: "1", name: "Robin" };
+  };
 
   function handleChange(event) {
     setSearch(event.target.value);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     const loadUser = async () => {
       const user = await getUser();
       setUser(user);
